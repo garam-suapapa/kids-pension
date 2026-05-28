@@ -1,0 +1,28 @@
+# Portfolio
+
+filters:
+  and:
+    - note["base"] == link("Portfolio.base")
+properties:
+  file.name:
+    displayName: Name
+  회사명:
+    displayName: 회사명
+  입사:
+    displayName: 입사
+  퇴사:
+    displayName: 퇴사
+  Tags:
+    displayName: Tags
+  기여도:
+    displayName: 기여도
+views:
+  - type: table
+    name: Table View
+    order:
+      - file.name
+      - 회사명
+      - 입사
+      - 퇴사
+      - Tags
+      - 기여도

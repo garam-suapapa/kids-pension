@@ -1,0 +1,15 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Obsidian system files that shouldn't be committed
+Obsidian Vault/.obsidian/workspace.json
+Obsidian Vault/.obsidian/workspace-mobile.json
+Obsidian Vault/.obsidian/backups/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

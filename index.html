@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키즈 펜션 비교 분석 대시보드</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-logo">
+                <i class="fa-solid fa-child-reaching logo-icon"></i>
+                <h1>Kids Pension <span>Comparator</span></h1>
+            </div>
+            <p class="header-subtitle">옵시디언 노트 연동형 키즈 펜션 5대 기준 비교 분석 대시보드</p>
+        </header>
+
+        <!-- Search & Filter Controls -->
+        <section class="controls-section">
+            <div class="search-sort-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="펜션 이름 또는 지역 검색...">
+                </div>
+                <div class="sort-box">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                    <select id="sortSelect">
+                        <option value="default">기본 정렬</option>
+                        <option value="rating">평점 높은 순</option>
+                        <option value="price-asc">가격 낮은 순</option>
+                        <option value="price-desc">가격 높은 순</option>
+                        <option value="rooms">방 많은 순</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 5 핵심 기준 필터 토글 -->
+            <div class="filters-container">
+                <h3 class="filter-title"><i class="fa-solid fa-filter"></i> 5대 평가 기준 퀵 필터</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-criterion="온수풀">
+                        <span class="icon">🏊</span> 온수풀 필수
+                    </button>
+                    <button class="filter-btn" data-criterion="방개수">
+                        <span class="icon">🛏️</span> 방 5개 이상 (단체)
+                    </button>
+                    <button class="filter-btn" data-criterion="금액">
+                        <span class="icon">💵</span> 금액 100만원 이하 (가성비)
+                    </button>
+                    <button class="filter-btn" data-criterion="키즈풀빌라">
+                        <span class="icon">🧸</span> 키즈풀빌라 전문
+                    </button>
+                    <button class="filter-btn" data-criterion="대중교통">
+                        <span class="icon">🚇</span> 대중교통 가능 (서울 인근)
+                    </button>
+                </div>
+                <div class="filter-meta-info">
+                    <span id="pensionCount">총 9개의 후보 분석 중</span>
+                    <button id="resetFilters" class="reset-btn"><i class="fa-solid fa-rotate-left"></i> 필터 초기화</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pensions Grid -->
+        <main class="pensions-grid" id="pensionsGrid">
+            <!-- Dynamic cards will be rendered here by JS -->
+        </main>
+        
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state hidden">
+            <i class="fa-solid fa-folder-open empty-icon"></i>
+            <h3>조건에 맞는 펜션이 없습니다.</h3>
+            <p>필터 조건을 완화해 보시거나 검색어를 확인해 주세요.</p>
+        </div>
+
+        <!-- 1:1 Compare Drawer -->
+        <div class="compare-drawer" id="compareDrawer">
+            <div class="drawer-header">
+                <h4><i class="fa-solid fa-code-compare"></i> 비교 후보군 선택 목록 (<span id="compareCount">0</span>/4)</h4>
+                <div class="drawer-actions">
+                    <button id="compareSubmitBtn" class="primary-btn" disabled>선택 펜션 1:1 비교하기</button>
+                    <button id="compareClearBtn" class="secondary-btn">전체 비우기</button>
+                </div>
+            </div>
+            <div class="drawer-items" id="compareDrawerItems">
+                <!-- Selected items thumbnails -->
+            </div>
+        </div>
+
+        <!-- Detail Modal -->
+        <div class="modal" id="detailModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeDetailModal">&times;</span>
+                <div class="modal-body" id="detailModalBody">
+                    <!-- Dynamic details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Compare Modal -->
+        <div class="modal compare-modal" id="compareModal">
+            <div class="modal-content large-content">
+                <span class="close-btn" id="closeCompareModal">&times;</span>
+                <div class="compare-modal-header">
+                    <h2><i class="fa-solid fa-code-compare"></i> 펜션 1:1 상세 비교 분석표</h2>
+                    <p>선택하신 후보군들의 5대 핵심 평가 기준 및 시설 요소를 종합 비교합니다.</p>
+                </div>
+                <div class="compare-table-wrapper">
+                    <table class="compare-table" id="compareTable">
+                        <!-- Dynamic side-by-side comparison table -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data and Application Script -->
+    <script src="pensions_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

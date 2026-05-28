@@ -1,0 +1,11 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "입사": "date",
+    "퇴사": "date",
+    "기여도": "text",
+    "회사명": "text"
+  }
+}
