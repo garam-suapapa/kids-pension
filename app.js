@@ -32,6 +32,14 @@ const closeCompareModal = document.getElementById("closeCompareModal");
 document.addEventListener("DOMContentLoaded", () => {
     renderPensions();
     setupEventListeners();
+    
+    // 사용자가 새로운 상세페이지 디자인을 빠르게 확인할 수 있도록 '하주 펜션' 상세 모달을 로드 시 자동 팝업합니다!
+    if (typeof pensionsData !== "undefined" && pensionsData.length > 0) {
+        const defaultShow = pensionsData.find(p => p.name.includes("하주")) || pensionsData[0];
+        setTimeout(() => {
+            openDetailModal(defaultShow);
+        }, 500);
+    }
 });
 
 // 2. Render Pensions Grid
@@ -194,7 +202,25 @@ function setupEventListeners() {
 
 // 4. Bind Card Interactivity
 function bindCardEvents() {
-    // Checkbox compare clicks
+    // 1. 카드 본체 전체 클릭 시 상세 모달로 진입 (체크박스/라벨 영역 제외)
+    const cards = document.querySelectorAll(".pension-card");
+    cards.forEach(card => {
+        card.style.cursor = "pointer";
+        card.addEventListener("click", (e) => {
+            // 비교담기 버튼이나 체크박스를 직접 누른 경우에는 모달이 열리지 않도록 제외 처리
+            if (e.target.closest(".compare-checkbox-label") || e.target.closest(".compare-checkbox-input")) {
+                return;
+            }
+            const detailBtn = card.querySelector(".view-detail-btn");
+            if (detailBtn) {
+                const pensionId = detailBtn.getAttribute("data-pension-id");
+                const pension = pensionsData.find(p => p.id === pensionId);
+                openDetailModal(pension);
+            }
+        });
+    });
+
+    // 2. 비교 담기 체크박스 라벨 클릭 이벤트
     const labels = document.querySelectorAll(".compare-checkbox-label");
     labels.forEach(label => {
         label.addEventListener("click", (e) => {
@@ -220,10 +246,11 @@ function bindCardEvents() {
         });
     });
 
-    // Detail Button clicks
+    // 3. 개별 상세 노트 버튼 클릭 이벤트
     const detailBtns = document.querySelectorAll(".view-detail-btn");
     detailBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // 카드 자체 클릭 이벤트 전파 차단
             const pensionId = btn.getAttribute("data-pension-id");
             const pension = pensionsData.find(p => p.id === pensionId);
             openDetailModal(pension);
