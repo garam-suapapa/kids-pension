@@ -314,48 +314,84 @@ function openDetailModal(pension) {
 
         <div class="detail-grid">
             <!-- 5대 기준 충족표 -->
-            <div class="detail-meta-card">
+            <div class="detail-meta-card neon-cyan-card">
                 <h3><i class="fa-solid fa-clipboard-check"></i> 5대 평가 핵심 대조</h3>
-                <table class="detail-meta-table">
-                    <tr>
-                        <td class="label-col">🏊 온수풀</td>
-                        <td class="value-col ${hasPool ? 'success' : 'alert'}">${pension.metadata.온수풀}</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">🛏️ 방 개수</td>
-                        <td class="value-col ${hasRooms ? 'success' : 'alert'}">${pension.metadata.방개수}</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">💵 숙박 금액</td>
-                        <td class="value-col ${isCheap ? 'success' : 'alert'}">${pension.metadata.금액}</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">🧸 키즈풀빌라</td>
-                        <td class="value-col ${isKids ? 'success' : 'alert'}">${pension.metadata.키즈풀빌라}</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">🚇 대중교통</td>
-                        <td class="value-col ${hasTransit ? 'success' : 'alert'}">${pension.metadata.대중교통}</td>
-                    </tr>
+                <table class="detail-meta-table elegant-table">
+                    <thead>
+                        <tr>
+                            <th>비교 항목</th>
+                            <th style="text-align: center;">판정</th>
+                            <th>상세 내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label-col">🏊 온수풀</td>
+                            <td class="status-col" style="text-align: center;">
+                                <span class="status-indicator ${hasPool ? 'success' : 'danger'}">
+                                    ${hasPool ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>'}
+                                </span>
+                            </td>
+                            <td class="desc-col">${pension.metadata.온수풀}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">🛏️ 방 개수</td>
+                            <td class="status-col" style="text-align: center;">
+                                <span class="status-indicator ${hasRooms ? 'success' : 'danger'}">
+                                    ${hasRooms ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>'}
+                                </span>
+                            </td>
+                            <td class="desc-col">${pension.metadata.방개수}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">💵 숙박 금액</td>
+                            <td class="status-col" style="text-align: center;">
+                                <span class="status-indicator ${isCheap ? 'success' : (pension.metadata.금액숫자 > 100 ? 'warning' : 'danger')}">
+                                    ${isCheap ? '<i class="fa-solid fa-check"></i>' : (pension.metadata.금액숫자 > 100 ? '<i class="fa-solid fa-exclamation"></i>' : '<i class="fa-solid fa-xmark"></i>')}
+                                </span>
+                            </td>
+                            <td class="desc-col">${pension.metadata.금액}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">🧸 키즈풀빌라</td>
+                            <td class="status-col" style="text-align: center;">
+                                <span class="status-indicator ${isKids ? 'success' : 'danger'}">
+                                    ${isKids ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>'}
+                                </span>
+                            </td>
+                            <td class="desc-col">${pension.metadata.키즈풀빌라}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">🚇 대중교통</td>
+                            <td class="status-col" style="text-align: center;">
+                                <span class="status-indicator ${hasTransit ? 'success' : 'danger'}">
+                                    ${hasTransit ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-xmark"></i>'}
+                                </span>
+                            </td>
+                            <td class="desc-col">${pension.metadata.대중교통}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             
             <!-- 평점 및 링크 -->
             <div class="detail-meta-card">
                 <h3><i class="fa-solid fa-circle-info"></i> 일반 정보</h3>
-                <table class="detail-meta-table">
-                    <tr>
-                        <td class="label-col">⭐ 만족 평점</td>
-                        <td class="value-col" style="color:var(--color-warning);">${pension.metadata.평점} / 5.0</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">📁 매칭 노트</td>
-                        <td class="value-col" style="font-weight:400;">${pension.filename}</td>
-                    </tr>
-                    <tr>
-                        <td class="label-col">🔗 예약 사이트</td>
-                        <td class="value-col"><a href="${pension.metadata.링크}" target="_blank" style="color:var(--color-info); text-decoration:none;"><i class="fa-solid fa-arrow-up-right-from-square"></i> 예약 사이트 가기</a></td>
-                    </tr>
+                <table class="detail-meta-table elegant-table">
+                    <tbody>
+                        <tr>
+                            <td class="label-col">⭐ 만족 평점</td>
+                            <td class="value-col" style="color:var(--color-warning); font-weight:700;">${pension.metadata.평점} / 5.0</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">📁 매칭 노트</td>
+                            <td class="value-col" style="color:var(--text-muted); font-weight:400;">${pension.filename}</td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">🔗 예약 사이트</td>
+                            <td class="value-col"><a href="${pension.metadata.링크}" target="_blank" style="color:var(--color-info); text-decoration:none;"><i class="fa-solid fa-arrow-up-right-from-square"></i> 예약 사이트 가기</a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -369,14 +405,14 @@ function openDetailModal(pension) {
 
         <!-- 장단점 대조 -->
         <div class="detail-grid">
-            <div class="detail-content-card">
-                <h3 style="border-color:var(--color-success);"><i class="fa-solid fa-thumbs-up" style="color:var(--color-success)"></i> 이 펜션의 장점</h3>
+            <div class="detail-content-card neon-green-card">
+                <h3 style="border-color:var(--color-success); color: var(--color-success);"><i class="fa-solid fa-thumbs-up" style="color:var(--color-success)"></i> 이 펜션의 장점</h3>
                 <ul>
                     ${pension.pros.length > 0 ? pension.pros.map(p => `<li class="pro"><i class="fa-solid fa-plus-circle"></i> <span>${p}</span></li>`).join('') : '<li style="color:var(--text-muted)">적혀있는 장점이 없습니다.</li>'}
                 </ul>
             </div>
-            <div class="detail-content-card">
-                <h3 style="border-color:var(--color-danger);"><i class="fa-solid fa-thumbs-down" style="color:var(--color-danger)"></i> 이 펜션의 단점</h3>
+            <div class="detail-content-card neon-red-card">
+                <h3 style="border-color:var(--color-danger); color: var(--color-danger);"><i class="fa-solid fa-thumbs-down" style="color:var(--color-danger)"></i> 이 펜션의 단점</h3>
                 <ul>
                     ${pension.cons.length > 0 ? pension.cons.map(c => `<li class="con"><i class="fa-solid fa-minus-circle"></i> <span>${c}</span></li>`).join('') : '<li style="color:var(--text-muted)">적혀있는 단점이 없습니다.</li>'}
                 </ul>
@@ -401,9 +437,60 @@ function openDetailModal(pension) {
                 </div>
             </div>
         </div>
+
+        <!-- Pinned Bottom Actions matching Mockup FAB sticky bar -->
+        <div class="modal-bottom-actions">
+            <button class="action-btn active"><i class="fa-solid fa-file-invoice"></i> 상세정보</button>
+            <a class="action-btn primary-action" href="${pension.metadata.링크}" target="_blank">
+                <i class="fa-solid fa-calendar-days"></i> 실시간 예약하기
+            </a>
+            <button class="action-btn secondary-action modal-compare-toggle" data-pension-id="${pension.id}">
+                <i class="fa-solid fa-code-compare"></i> 비교 담기
+            </button>
+        </div>
     `;
 
     detailModal.classList.add("open");
+
+    // Bind click for compare toggle in modal
+    const modalCompareToggle = detailModalBody.querySelector(".modal-compare-toggle");
+    if (modalCompareToggle) {
+        const pensionId = modalCompareToggle.getAttribute("data-pension-id");
+        // Check if already in compare list
+        const isChecked = compareList.some(item => item.id === pensionId);
+        if (isChecked) {
+            modalCompareToggle.classList.add("active");
+            modalCompareToggle.innerHTML = `<i class="fa-solid fa-check-double"></i> 비교 담김`;
+        }
+        
+        modalCompareToggle.addEventListener("click", () => {
+            const isNowChecked = compareList.some(item => item.id === pensionId);
+            const pensionObj = pensionsData.find(p => p.id === pensionId);
+            
+            if (isNowChecked) {
+                // Remove
+                compareList = compareList.filter(item => item.id !== pensionId);
+                modalCompareToggle.classList.remove("active");
+                modalCompareToggle.innerHTML = `<i class="fa-solid fa-code-compare"></i> 비교 담기`;
+                // Sync grid check
+                const checkbox = document.getElementById(`comp_${pensionId}`);
+                if (checkbox) checkbox.checked = false;
+            } else {
+                // Add
+                if (compareList.length >= MAX_COMPARE) {
+                    alert(`비교는 최대 ${MAX_COMPARE}개까지만 가능합니다!`);
+                    return;
+                }
+                compareList.push(pensionObj);
+                modalCompareToggle.classList.add("active");
+                modalCompareToggle.innerHTML = `<i class="fa-solid fa-check-double"></i> 비교 담김`;
+                // Sync grid check
+                const checkbox = document.getElementById(`comp_${pensionId}`);
+                if (checkbox) checkbox.checked = true;
+            }
+            updateCompareDrawer();
+        });
+    }
 
     // Initialize carousel JS logic if multiple images
     if (pension.images && pension.images.length > 1) {

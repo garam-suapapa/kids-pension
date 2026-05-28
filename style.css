@@ -970,6 +970,148 @@ body {
 .compare-table td.meta-val.warning { color: var(--color-warning); }
 .compare-table td.meta-val.danger { color: var(--color-danger); }
 
+/* Premium Detail Modal Upgrades matching Mockup High-Fidelity UI */
+.neon-cyan-card {
+    border: 1px solid rgba(0, 229, 255, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.05), 0 0 15px rgba(0, 229, 255, 0.1) !important;
+}
+.neon-green-card {
+    border: 1px solid rgba(0, 230, 118, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(0, 230, 118, 0.05), 0 0 15px rgba(0, 230, 118, 0.1) !important;
+}
+.neon-red-card {
+    border: 1px solid rgba(255, 23, 68, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(255, 23, 68, 0.05), 0 0 15px rgba(255, 23, 68, 0.1) !important;
+}
+
+.elegant-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+}
+.elegant-table th {
+    padding: 10px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+.elegant-table td {
+    padding: 12px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.elegant-table tr:last-child td {
+    border-bottom: none;
+}
+.elegant-table td.label-col {
+    width: 25%;
+    font-weight: 600;
+    color: var(--text-main);
+}
+.elegant-table td.status-col {
+    width: 15%;
+}
+.elegant-table td.desc-col {
+    font-size: 0.85rem;
+    color: #cbd5e0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 0.78rem;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+.status-indicator.success {
+    background: rgba(0, 230, 118, 0.1);
+    color: var(--color-success);
+    border-color: rgba(0, 230, 118, 0.3);
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.15);
+}
+.status-indicator.danger {
+    background: rgba(255, 23, 68, 0.1);
+    color: var(--color-danger);
+    border-color: rgba(255, 23, 68, 0.3);
+    box-shadow: 0 0 8px rgba(255, 23, 68, 0.15);
+}
+.status-indicator.warning {
+    background: rgba(255, 145, 0, 0.1);
+    color: var(--color-warning);
+    border-color: rgba(255, 145, 0, 0.3);
+    box-shadow: 0 0 8px rgba(255, 145, 0, 0.15);
+}
+
+.modal-bottom-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 13, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px 30px;
+    margin: 25px -30px -30px -30px; /* pull to margins of modal content padding */
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    bottom: -30px; /* stick to bottom padding of modal content */
+    z-index: 20;
+    backdrop-filter: blur(12px);
+    gap: 15px;
+}
+@media (max-width: 768px) {
+    .modal-bottom-actions {
+        margin: 20px -15px -15px -15px !important;
+        bottom: -15px !important;
+        padding: 12px 15px !important;
+        gap: 10px !important;
+    }
+}
+.modal-bottom-actions .action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.modal-bottom-actions .action-btn.active {
+    background: rgba(124, 77, 255, 0.15);
+    border-color: var(--accent-primary);
+    color: var(--accent-hover);
+}
+.modal-bottom-actions .action-btn.primary-action {
+    background: var(--accent-primary-gradient);
+    color: var(--text-main);
+    border: none;
+}
+.modal-bottom-actions .action-btn.primary-action:hover {
+    filter: brightness(1.15);
+    box-shadow: var(--shadow-glow);
+}
+.modal-bottom-actions .action-btn.secondary-action.active {
+    background: rgba(0, 229, 255, 0.15);
+    border-color: var(--color-info);
+    color: var(--color-info);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
 @media (max-width: 768px) {
     /* 1. 컴팩트 카드 적용 */
     .card-features,
@@ -1054,8 +1196,31 @@ body {
         padding: 15px !important;
         border-radius: 10px !important;
     }
-    
-    /* 5. 모바일 본문 스페이스 패딩 조정 */
+    /* 5. 모바일 테이블 셀 가독성 최적화 */
+    .elegant-table th {
+        font-size: 0.75rem !important;
+        padding: 8px 5px !important;
+    }
+    .elegant-table td {
+        padding: 8px 5px !important;
+    }
+    .elegant-table td.label-col {
+        font-size: 0.8rem !important;
+        width: 32% !important;
+    }
+    .elegant-table td.status-col {
+        width: 15% !important;
+    }
+    .elegant-table td.desc-col {
+        font-size: 0.78rem !important;
+    }
+    .status-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 0.68rem !important;
+    }
+
+    /* 6. 모바일 본문 스페이스 패딩 조정 */
     body {
         padding-bottom: 90px !important;
     }
