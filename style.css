@@ -969,3 +969,94 @@ body {
 .compare-table td.meta-val.success { color: var(--color-success); }
 .compare-table td.meta-val.warning { color: var(--color-warning); }
 .compare-table td.meta-val.danger { color: var(--color-danger); }
+
+@media (max-width: 768px) {
+    /* 1. 컴팩트 카드 적용 */
+    .card-features,
+    .card-memo {
+        display: none !important;
+    }
+    .pension-card {
+        border-radius: 12px;
+    }
+    .card-img-wrapper {
+        height: 160px;
+    }
+    .card-info {
+        padding: 15px;
+    }
+
+    /* 2. 스와이프 필터 버튼 */
+    .filter-buttons {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 5px;
+        gap: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .filter-btn {
+        flex-shrink: 0 !important;
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. 슬림 플로팅 비교바 */
+    .compare-drawer {
+        padding: 10px 15px !important;
+        bottom: -100px;
+        left: 15px !important;
+        right: 15px !important;
+        width: auto !important;
+        border-radius: 12px !important;
+        border: 1px solid var(--accent-primary) !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
+    }
+    .compare-drawer.open {
+        bottom: 15px !important;
+    }
+    .drawer-items {
+        display: none !important; /* 모바일에서 썸네일 숨김 */
+    }
+    .drawer-header {
+        gap: 10px;
+    }
+    .drawer-header h4 {
+        font-size: 0.85rem !important;
+    }
+    
+    /* 4. 모바일 상세 모달 최적화 */
+    .modal {
+        padding: 10px !important;
+    }
+    .modal-content {
+        padding: 15px !important;
+        max-height: 90vh !important;
+        border-radius: 16px !important;
+    }
+    .carousel {
+        height: 220px !important; /* 모바일 캐러셀 높이 축소 */
+        margin-bottom: 15px !important;
+    }
+    .detail-title {
+        font-size: 1.4rem !important;
+    }
+    .detail-header {
+        margin-bottom: 15px !important;
+        padding-bottom: 10px !important;
+    }
+    .detail-grid {
+        gap: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    .detail-meta-card, 
+    .detail-content-card,
+    .detail-memo-box {
+        padding: 15px !important;
+        border-radius: 10px !important;
+    }
+    
+    /* 5. 모바일 본문 스페이스 패딩 조정 */
+    body {
+        padding-bottom: 90px !important;
+    }
+}
