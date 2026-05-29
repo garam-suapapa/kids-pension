@@ -105,7 +105,11 @@ def parse_pension_note(file_path):
                         except:
                             pension_data["metadata"]["평점"] = 4.5
                     elif "링크" in key:
-                        pension_data["metadata"]["링크"] = val
+                        url_match = re.search(r'(https?://[^\s()]+)', val)
+                        if url_match:
+                            pension_data["metadata"]["링크"] = url_match.group(1).strip()
+                        else:
+                            pension_data["metadata"]["링크"] = val.strip()
 
         # 2. Kids Facilities
         elif "키즈 시설" in header or "키즈시설" in header:
