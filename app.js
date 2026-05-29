@@ -32,14 +32,6 @@ const closeCompareModal = document.getElementById("closeCompareModal");
 document.addEventListener("DOMContentLoaded", () => {
     renderPensions();
     setupEventListeners();
-    
-    // 사용자가 새로운 상세페이지 디자인을 빠르게 확인할 수 있도록 '하주 펜션' 상세 모달을 로드 시 자동 팝업합니다!
-    if (typeof pensionsData !== "undefined" && pensionsData.length > 0) {
-        const defaultShow = pensionsData.find(p => p.name.includes("하주")) || pensionsData[0];
-        setTimeout(() => {
-            openDetailModal(defaultShow);
-        }, 500);
-    }
 });
 
 // 2. Render Pensions Grid
