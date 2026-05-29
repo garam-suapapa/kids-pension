@@ -109,7 +109,7 @@ const pensionsData = [
       "키즈풀빌라": "예 (2층 키즈존 놀이공간, 대형 야외 트램펄린, 실내 대형 온수풀, 야외 물놀이 가능)",
       "대중교통": "가능/보통 (서울 오이도역에서 790번 버스 등으로 대부도 진입 가능, 비대면 체크인)",
       "평점": 4.8,
-      "링크": "http://www.대부도메르블루키즈풀빌라.com/reservation.php",
+      "링크": "http://www.xn--oi2bz0a8l12ag1lwj548d85mdoi.com/reservation.php",
       "방개수_숫자": 5
     },
     "kids_facilities": [
@@ -165,7 +165,7 @@ const pensionsData = [
       "키즈풀빌라": "예/보통 (키즈 놀이방 및 트램펄린 보유, 마당 내 야외 키즈놀이터 구비)",
       "대중교통": "가능/보통 (서울 오이도역에서 790번 버스 등으로 대부도 진입 가능, 10인 미만 픽업 서비스 상담 가능)",
       "평점": 4.6,
-      "링크": "http://미르펜션.com/theme/basic/reservation.php",
+      "링크": "http://xn--2w2b19b87gn4v.com/theme/basic/reservation.php",
       "방개수_숫자": 3
     },
     "kids_facilities": [
