@@ -1128,18 +1128,25 @@ body {
         padding: 15px;
     }
 
-    /* 2. 스와이프 필터 버튼 */
+    /* 2. 모바일 필터 버튼 전체 보기 레이아웃 (그리드 정렬) */
     .filter-buttons {
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        padding-bottom: 5px;
-        gap: 8px;
-        -webkit-overflow-scrolling: touch;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        overflow-x: visible !important;
+        flex-wrap: wrap !important;
+        padding-bottom: 0 !important;
+    }
+    .filter-buttons > button:last-child {
+        grid-column: span 2 !important; /* 마지막 대중교통 단추는 가로폭 전체 차지 */
     }
     .filter-btn {
-        flex-shrink: 0 !important;
-        padding: 8px 15px !important;
-        font-size: 0.85rem !important;
+        flex-shrink: unset !important;
+        width: 100% !important;
+        padding: 8px 10px !important;
+        font-size: 0.8rem !important;
+        justify-content: center !important; /* 가로 중앙 배치 */
+        border-radius: 8px !important;
     }
 
     /* 3. 슬림 플로팅 비교바 */
