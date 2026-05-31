@@ -279,8 +279,15 @@ const pensionsData = [
       "주말 요금이 130만원 선으로 고가이나, 인원수가 많아 비용을 N분의 1로 나눌 경우 개인 부담금은 가장 저렴해짐."
     ],
     "memo": "온 가족 및 지인 모임 등 대규모 연합 여행 시 고민할 필요 없이 최고의 선택지인 초거대 독채 풀빌라. 예약 마감이 가장 빠르므로 주의 요망!",
-    "images": [],
-    "cover_image": "assets/placeholder.jpg"
+    "images": [
+      "assets/pension_images/goldenwave_room_1.jpg",
+      "assets/pension_images/goldenwave_room_2.jpg",
+      "assets/pension_images/goldenwave_room_3.jpg",
+      "assets/pension_images/goldenwave_room_4.jpg",
+      "assets/pension_images/goldenwave_room_5.jpg",
+      "assets/pension_images/goldenwave_room_6.jpg"
+    ],
+    "cover_image": "assets/pension_images/goldenwave_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_꾸꾸",
