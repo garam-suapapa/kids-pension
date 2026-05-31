@@ -237,14 +237,16 @@ const pensionsData = [
     ],
     "memo": "방 5개와 화장실 4개의 황금 밸런스를 갖춘 105평형 대형 독채. 씻는 것과 화장실 이용에 예민한 깔끔한 단체 가족 여행에 적극 추천!",
     "images": [
-      "assets/pension_images/room_709_0.jpg",
-      "assets/pension_images/room_709_1.jpg",
-      "assets/pension_images/room_709_2.jpg",
-      "assets/pension_images/room_709_3.jpg",
-      "assets/pension_images/room_709_4.jpg",
-      "assets/pension_images/room_709_5.jpg"
+      "assets/pension_images/room_709_room_1.jpg",
+      "assets/pension_images/room_709_room_2.jpg",
+      "assets/pension_images/room_709_room_3.jpg",
+      "assets/pension_images/room_709_room_4.jpg",
+      "assets/pension_images/room_709_room_5.jpg",
+      "assets/pension_images/room_709_room_6.jpg",
+      "assets/pension_images/room_709_room_7.jpg",
+      "assets/pension_images/room_709_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_709_0.jpg"
+    "cover_image": "assets/pension_images/room_709_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_골든웨이브",
@@ -285,7 +287,9 @@ const pensionsData = [
       "assets/pension_images/goldenwave_room_3.jpg",
       "assets/pension_images/goldenwave_room_4.jpg",
       "assets/pension_images/goldenwave_room_5.jpg",
-      "assets/pension_images/goldenwave_room_6.jpg"
+      "assets/pension_images/goldenwave_room_6.jpg",
+      "assets/pension_images/goldenwave_room_7.jpg",
+      "assets/pension_images/goldenwave_room_8.jpg"
     ],
     "cover_image": "assets/pension_images/goldenwave_room_1.jpg"
   },
@@ -324,14 +328,16 @@ const pensionsData = [
     ],
     "memo": "수영장의 크기와 물놀이의 만족도를 최우선으로 생각한다면, 키즈밸리 타운 내에서 가장 압도적인 대형 풀장을 갖춘 강력 추천 숙소!",
     "images": [
-      "assets/pension_images/room_789_0.jpg",
-      "assets/pension_images/room_789_1.jpg",
-      "assets/pension_images/room_789_2.jpg",
-      "assets/pension_images/room_789_3.jpg",
-      "assets/pension_images/room_789_4.jpg",
-      "assets/pension_images/room_789_5.jpg"
+      "assets/pension_images/room_789_room_1.jpg",
+      "assets/pension_images/room_789_room_2.jpg",
+      "assets/pension_images/room_789_room_3.jpg",
+      "assets/pension_images/room_789_room_4.jpg",
+      "assets/pension_images/room_789_room_5.jpg",
+      "assets/pension_images/room_789_room_6.jpg",
+      "assets/pension_images/room_789_room_7.jpg",
+      "assets/pension_images/room_789_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_789_0.jpg"
+    "cover_image": "assets/pension_images/room_789_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_달빛되어",
@@ -367,14 +373,16 @@ const pensionsData = [
     ],
     "memo": "3층 구조의 대형 단독 펜션으로 사생활 보호와 넓은 거실 공간 확보가 가능. 주말 비용 부담을 피할 수 있는 주중/금요일 합동 여행에 유리함.",
     "images": [
-      "assets/pension_images/room_828_0.jpg",
-      "assets/pension_images/room_828_1.jpg",
-      "assets/pension_images/room_828_2.jpg",
-      "assets/pension_images/room_828_3.jpg",
-      "assets/pension_images/room_828_4.jpg",
-      "assets/pension_images/room_828_5.jpg"
+      "assets/pension_images/room_828_room_1.jpg",
+      "assets/pension_images/room_828_room_2.jpg",
+      "assets/pension_images/room_828_room_3.jpg",
+      "assets/pension_images/room_828_room_4.jpg",
+      "assets/pension_images/room_828_room_5.jpg",
+      "assets/pension_images/room_828_room_6.jpg",
+      "assets/pension_images/room_828_room_7.jpg",
+      "assets/pension_images/room_828_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_828_0.jpg"
+    "cover_image": "assets/pension_images/room_828_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_더데이",
@@ -410,14 +418,16 @@ const pensionsData = [
     ],
     "memo": "아이들이 좋아하는 전동차 시설과 대형 온수풀을 보유한 즐길 거리 가득한 펜션. 화장실 2개 감수가 가능한 3가족 내외에 추천.",
     "images": [
-      "assets/pension_images/room_337_0.jpg",
-      "assets/pension_images/room_337_1.jpg",
-      "assets/pension_images/room_337_2.jpg",
-      "assets/pension_images/room_337_3.jpg",
-      "assets/pension_images/room_337_4.jpg",
-      "assets/pension_images/room_337_5.jpg"
+      "assets/pension_images/room_337_room_1.jpg",
+      "assets/pension_images/room_337_room_2.jpg",
+      "assets/pension_images/room_337_room_3.jpg",
+      "assets/pension_images/room_337_room_4.jpg",
+      "assets/pension_images/room_337_room_5.jpg",
+      "assets/pension_images/room_337_room_6.jpg",
+      "assets/pension_images/room_337_room_7.jpg",
+      "assets/pension_images/room_337_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_337_0.jpg"
+    "cover_image": "assets/pension_images/room_337_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_더킹",
@@ -453,14 +463,16 @@ const pensionsData = [
     ],
     "memo": "방 9개짜리 대부도 끝판왕급 독채 풀빌라. 대규모 가족 모임이나 다수 가족의 연합 여행 시 완벽한 프라이빗 수영과 노래방 파티를 즐길 수 있는 추천작!",
     "images": [
-      "assets/pension_images/room_740_0.jpg",
-      "assets/pension_images/room_740_1.jpg",
-      "assets/pension_images/room_740_2.jpg",
-      "assets/pension_images/room_740_3.jpg",
-      "assets/pension_images/room_740_4.jpg",
-      "assets/pension_images/room_740_5.jpg"
+      "assets/pension_images/room_740_room_1.jpg",
+      "assets/pension_images/room_740_room_2.jpg",
+      "assets/pension_images/room_740_room_3.jpg",
+      "assets/pension_images/room_740_room_4.jpg",
+      "assets/pension_images/room_740_room_5.jpg",
+      "assets/pension_images/room_740_room_6.jpg",
+      "assets/pension_images/room_740_room_7.jpg",
+      "assets/pension_images/room_740_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_740_0.jpg"
+    "cover_image": "assets/pension_images/room_740_room_1.jpg"
   },
   {
     "id": "대부도_키즈밸리_하이베어",
@@ -499,14 +511,16 @@ const pensionsData = [
     ],
     "memo": "안산시 단원구 키즈밸리 타운 내 위치. 어른들의 친목 운동(족구)과 아이들의 수영/놀이를 동시에 고루 만족시킬 수 있는 만능형 추천 독채!",
     "images": [
-      "assets/pension_images/room_328_0.jpg",
-      "assets/pension_images/room_328_1.jpg",
-      "assets/pension_images/room_328_2.jpg",
-      "assets/pension_images/room_328_3.jpg",
-      "assets/pension_images/room_328_4.jpg",
-      "assets/pension_images/room_328_5.jpg"
+      "assets/pension_images/room_328_room_1.jpg",
+      "assets/pension_images/room_328_room_2.jpg",
+      "assets/pension_images/room_328_room_3.jpg",
+      "assets/pension_images/room_328_room_4.jpg",
+      "assets/pension_images/room_328_room_5.jpg",
+      "assets/pension_images/room_328_room_6.jpg",
+      "assets/pension_images/room_328_room_7.jpg",
+      "assets/pension_images/room_328_room_8.jpg"
     ],
-    "cover_image": "assets/pension_images/room_328_0.jpg"
+    "cover_image": "assets/pension_images/room_328_room_1.jpg"
   },
   {
     "id": "대부도_펜션타운_모네",
@@ -548,7 +562,9 @@ const pensionsData = [
       "assets/pension_images/monet_room_3.jpg",
       "assets/pension_images/monet_room_4.jpg",
       "assets/pension_images/monet_room_5.jpg",
-      "assets/pension_images/monet_room_6.jpg"
+      "assets/pension_images/monet_room_6.jpg",
+      "assets/pension_images/monet_room_7.jpg",
+      "assets/pension_images/monet_room_8.jpg"
     ],
     "cover_image": "assets/pension_images/monet_room_1.jpg"
   },
@@ -592,7 +608,9 @@ const pensionsData = [
       "assets/pension_images/ivy_room_3.jpg",
       "assets/pension_images/ivy_room_4.jpg",
       "assets/pension_images/ivy_room_5.jpg",
-      "assets/pension_images/ivy_room_6.jpg"
+      "assets/pension_images/ivy_room_6.jpg",
+      "assets/pension_images/ivy_room_7.jpg",
+      "assets/pension_images/ivy_room_8.jpg"
     ],
     "cover_image": "assets/pension_images/ivy_room_1.jpg"
   },
@@ -635,7 +653,9 @@ const pensionsData = [
       "assets/pension_images/picasso_room_3.jpg",
       "assets/pension_images/picasso_room_4.jpg",
       "assets/pension_images/picasso_room_5.jpg",
-      "assets/pension_images/picasso_room_6.jpg"
+      "assets/pension_images/picasso_room_6.jpg",
+      "assets/pension_images/picasso_room_7.jpg",
+      "assets/pension_images/picasso_room_8.jpg"
     ],
     "cover_image": "assets/pension_images/picasso_room_1.jpg"
   },
