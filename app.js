@@ -103,7 +103,7 @@ function renderPensions() {
 
         card.innerHTML = `
             <div class="card-img-wrapper">
-                <img class="card-img" src="${pension.cover_image}" alt="${pension.name}" onerror="this.src='assets/placeholder.jpg'">
+                <img class="card-img" src="${pension.cover_image}" alt="${pension.name}" onerror="this.src='assets/placeholder.jpg'" loading="lazy">
                 <div class="card-rating-badge">
                     <i class="fa-solid fa-star"></i> ${pension.metadata.평점}
                 </div>
@@ -263,7 +263,7 @@ function updateCompareDrawer() {
             const item = document.createElement("div");
             item.className = "drawer-item";
             item.innerHTML = `
-                <img src="${pension.cover_image}" alt="${pension.name}">
+                <img src="${pension.cover_image}" alt="${pension.name}" loading="lazy">
                 <span>${pension.name}</span>
                 <button class="drawer-item-remove" data-id="${pension.id}">&times;</button>
             `;
@@ -300,7 +300,7 @@ function openDetailModal(pension) {
                 <div class="carousel-track" id="carouselTrack">
                     ${pension.images.map(img => `
                         <div class="carousel-slide">
-                            <img src="${img}" alt="${pension.name}" onerror="this.src='assets/placeholder.jpg'">
+                            <img src="${img}" alt="${pension.name}" onerror="this.src='assets/placeholder.jpg'" loading="lazy">
                         </div>
                     `).join('')}
                 </div>
@@ -576,7 +576,7 @@ function openCompareModal() {
             return `
                 <th class="compare-pension-header">
                     <h4>${p.name}</h4>
-                    <img class="compare-pension-img" src="${p.cover_image}" alt="${p.name}" onerror="this.src='assets/placeholder.jpg'">
+                    <img class="compare-pension-img" src="${p.cover_image}" alt="${p.name}" onerror="this.src='assets/placeholder.jpg'" loading="lazy">
                     <div class="compare-badge-container">
                         <span class="criterion-badge ${hasPool ? 'active' : ''}">🏊</span>
                         <span class="criterion-badge ${hasRooms ? 'active' : ''}">🛏️</span>
